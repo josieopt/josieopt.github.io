@@ -41,9 +41,13 @@ a {
 }
 
 a:hover,
-a:focus,
+a:focus {
+  color: #a875ff;        /* Taro purple on hover/focus only */
+}
+
+/* Remove purple for visited */
 a:visited {
-  color: #a875ff; /* Taro purple on hover and visited */
+  color: inherit;
 }
 
 /* Footer */
