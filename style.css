@@ -1,114 +1,118 @@
+/* Base body style: Notion-like */
 body {
-  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   background: #ffffff;
-  color: #1a1a1a;
+  color: #37352f; /* Notion's default text color */
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 17px;
 }
 
+/* Container to center all content */
 .container {
   max-width: 700px;
-  margin: auto;
+  margin: 0 auto;
   padding: 2rem;
+  text-align: left;
 }
 
+/* Header title */
 header h1 {
-  font-weight: 600;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-nav a {
-  margin-right: 1rem;
-  color: #555;
+/* Navigation styling */
+nav {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Link styling: match Notion by default, turn taro purple on hover/visit */
+a {
+  color: inherit;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
-  text-decoration: underline;
+a:hover,
+a:focus,
+a:visited {
+  color: #a875ff; /* Taro purple on hover and visited */
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 0.7rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #999;
 }
 
+/* Post preview on homepage */
 .post-preview {
+  margin-bottom: 2rem;
   border-bottom: 1px solid #eee;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
 }
 
 .post-preview img {
   max-width: 100%;
   height: auto;
-  display: block;
   margin-bottom: 0.5rem;
 }
 
-footer {
-  text-align: center;
-  color: #aaa;
-  font-size: 0.9rem;
-  margin-top: 3rem;
-  border-top: 1px solid #eee;
-  padding-top: 2rem;
+/* Search bar */
+#searchInput {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
 }
 
-.content-wrapper {
+/* Layout for posts page with sidebar */
+.posts-layout {
   display: flex;
   gap: 2rem;
 }
 
-main {
-  flex: 3;
-}
-
-.year-sidebar {
-  flex: 1;
-  border-left: 1px solid #eee;
-  padding-left: 1rem;
-  font-size: 0.9rem;
+/* Sidebar timeline */
+.timeline {
+  flex: 0 0 100px;
   position: sticky;
   top: 2rem;
   height: fit-content;
 }
 
-.year-sidebar ul {
+.timeline ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  font-size: 0.9rem;
 }
 
-.year-sidebar li + li {
-  margin-top: 0.5rem;
-}
-
-.year-sidebar a {
-  color: #555;
+.timeline a {
+  color: inherit;
   text-decoration: none;
 }
 
-.year-sidebar a:hover {
-  text-decoration: underline;
+.timeline a:hover {
+  color: #a875ff;
 }
 
-/* Make links look like normal text initially */
-a {
-  color: inherit; /* Same as surrounding text */
-  text-decoration: none;
+/* Main posts section */
+.posts-content {
+  flex: 1;
 }
 
-/* When hovered */
-a:hover {
-  text-decoration: underline;
-}
-
-/* When visited (clicked before) */
-a:visited {
-  color: #9f79ee; /* Taro purple */
+.posts-content h2 {
+  margin-top: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
 }
