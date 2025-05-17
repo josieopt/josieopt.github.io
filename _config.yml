@@ -1,13 +1,8 @@
 
 title: Josie.Y's Blog
 email: josielc1226@gmail.com
-description: >-
-  A clean blog to share optimization models and Python code.
-baseurl: ""
-url: "https://josiey.github.io"
+description: Sharing optimization models and Python code
 markdown: kramdown
-kramdown:
-  input: GFM
 theme: minima
 plugins:
   - jekyll-feed
