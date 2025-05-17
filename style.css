@@ -1,3 +1,65 @@
+body {
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+nav a {
+  margin-right: 1rem;
+  color: #555;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.post-preview {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.post-preview img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+}
+
 .content-wrapper {
   display: flex;
   gap: 2rem;
