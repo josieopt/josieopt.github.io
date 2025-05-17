@@ -8,13 +8,9 @@ title: Home
 <ul id="postList">
   {% for post in site.posts %}
     <li class="post-preview">
-      <a href="{{ post.url }}">
-        {% if post.content contains 'img' %}
-          {{ post.content | split:'<img' | last | split:'>' | first | prepend:'<img' | append:'>' }}
-        {% endif %}
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.excerpt }}</p>
-      </a>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      <a href="{{ post.url }}">Read more →</a>
     </li>
   {% endfor %}
 </ul>
