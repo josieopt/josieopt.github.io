@@ -121,6 +121,20 @@ footer {
   padding-bottom: 0.5rem;
 }
 
+/* Make links inside posts always taro purple */
+.posts-content a {
+  color: #a875ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.posts-content a:hover,
+.posts-content a:focus {
+  /* Optional: keep same color on hover/focus */
+  color: #a875ff;
+}
+
+
 /* Code block styling */
 pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
