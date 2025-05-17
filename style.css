@@ -96,3 +96,19 @@ main {
 .year-sidebar a:hover {
   text-decoration: underline;
 }
+
+/* Make links look like normal text initially */
+a {
+  color: inherit; /* Same as surrounding text */
+  text-decoration: none;
+}
+
+/* When hovered */
+a:hover {
+  text-decoration: underline;
+}
+
+/* When visited (clicked before) */
+a:visited {
+  color: #9f79ee; /* Taro purple */
+}
