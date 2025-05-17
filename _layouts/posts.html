@@ -15,31 +15,23 @@
       <a href="/about">About</a>
     </nav>
   </header>
+
   <div class="container">
-    <div class="container posts-layout">
-      <aside class="timeline">
-        <ul>
-          {% assign years = site.posts | map: 'date' | map: 'year' | uniq %}
-          {% for year in years %}
-            <li><a href="#year-{{ year }}">{{ year }}</a></li>
-          {% endfor %}
-        </ul>
-      </aside>
-  
-      <main class="posts-content">
-        {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-        {% for year_group in posts_by_year %}
-          <h2 id="year-{{ year_group.name }}">{{ year_group.name }}</h2>
-          <ul>
-            {% for post in year_group.items %}
-              <li>
-                <a href="{{ post.url }}">{{ post.title }}</a> – <small>{{ post.date | date: "%b %-d, %Y" }}</small>
-              </li>
-            {% endfor %}
-          </ul>
+
+    <!-- Search bar for posts -->
+    <input type="text" id="searchInput" placeholder="Search posts..." onkeyup="filterPosts()" style="margin-bottom: 1.5rem; width: 100%; padding: 0.6rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
+
+    <main class="posts-content">
+      <ul id="postList" style="list-style: none; padding-left: 0;">
+        {% for post in site.posts %}
+          <li class="post-preview" style="margin-bottom: 1rem;">
+            <a href="{{ post.url }}">{{ post.title }}</a> – <small>{{ post.date | date: "%b %-d, %Y" }}</small>
+          </li>
         {% endfor %}
-      </main>
-    </div>
-   </div>
+      </ul>
+    </main>
+  </div>
+
+  <script src="/search.js"></script>
 </body>
 </html>
