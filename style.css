@@ -33,6 +33,19 @@ nav {
   gap: 2rem;
 }
 
+.blog-title {
+  color: #a875ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.blog-title:hover,
+.blog-title:focus {
+  color: #a875ff; /* Keep same color on hover/focus */
+  text-decoration: underline; /* Optional */
+}
+
+
 /* Link styling: match Notion by default, turn taro purple on hover/visit */
 a {
   color: inherit;
