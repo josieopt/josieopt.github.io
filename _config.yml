@@ -7,6 +7,19 @@ markdown: kramdown
 kramdown:
   input: GFM
 theme: minima
+
+# Add this to include your custom styles
+sass:
+  style: compressed
+
+# Tell Jekyll to use your CSS
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      css: "/assets/CSS/custom.css"
 plugins:
   - jekyll-feed
 
