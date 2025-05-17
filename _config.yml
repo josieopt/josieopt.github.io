@@ -2,7 +2,11 @@
 title: Josie.Y's Blog
 email: josielc1226@gmail.com
 description: Sharing optimization models and Python code
+highlighter: rouge
 markdown: kramdown
+kramdown:
+  input: GFM
 theme: minima
 plugins:
   - jekyll-feed
+
