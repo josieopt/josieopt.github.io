@@ -42,7 +42,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #a875ff;        /* Taro purple on hover/focus only */
+  color: #a875ff !important;        /* Taro purple on hover/focus only */
 }
 
 /* Remove purple for visited */
