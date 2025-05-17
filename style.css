@@ -116,3 +116,32 @@ footer {
   border-bottom: 1px solid #eee;
   padding-bottom: 0.5rem;
 }
+
+/* Code block styling */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: #f6f8fa;
+  color: #333;
+  border-radius: 8px;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  line-height: 1.5;
+  font-size: 15px;
+  margin-bottom: 1.5rem;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+/* Inline code */
+p code, li code {
+  background: #f0f0f0;
+  color: #d63384;
+  font-size: 0.95em;
+}
+
