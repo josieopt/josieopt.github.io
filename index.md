@@ -8,6 +8,13 @@ title: Home
 <ul id="postList">
   {% for post in site.posts %}
     <li class="post-preview">
+      <!-- Show first image if exists -->
+      {% assign first_img = post.content | split:'<img' | slice:1,1 | first %}
+      {% if first_img %}
+        {% assign img_tag = '<img' | append:first_img | split:'>' | first | append:'>' %}
+        {{ img_tag | raw }}
+      {% endif %}
+
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
       <a href="{{ post.url }}">Read more →</a>
