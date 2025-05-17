@@ -1,0 +1,17 @@
+/* Set consistent margin and width for all page types */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Optional: tweak header/footer if needed */
+.site-header,
+.site-footer {
+  padding: 1rem;
+}
