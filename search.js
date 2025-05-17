@@ -1,4 +1,3 @@
-
 function filterPosts() {
   var input = document.getElementById("searchInput");
   var filter = input.value.toLowerCase();
