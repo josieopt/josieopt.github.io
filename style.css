@@ -19,21 +19,21 @@ body {
 /* === Header === */
 header {
   display: flex;
-  align-items: center;
-  padding: 0.8rem 0; /* vertical padding only */
+  align-items: center; /* vertical center */
+  justify-content: space-between; /* blog name left, nav right */
+  padding: 0.8rem 0;
   background-color: white;
   color: #1c1c1c;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* keep on one line */
   gap: 1rem;
-  justify-content: flex-start; /* align content to left inside header */
 }
 
 .blog-title {
   font-weight: 700;
   font-size: 1.6rem;
-  margin-right: 2rem;
   color: inherit;
   text-decoration: none;
+  margin: 0; /* remove default margin */
   flex-shrink: 0;
 }
 
@@ -41,15 +41,16 @@ nav {
   display: flex;
   gap: 1.5rem;
   font-weight: 600;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-grow: 1;
+  justify-content: flex-end; /* align nav links right */
+  align-items: center; /* vertical align nav links same as blog title */
+  flex-grow: 0; /* no grow */
 }
 
 header a {
   color: #1c1c1c;
   text-decoration: none;
   transition: text-decoration 0.3s ease;
+  line-height: 1.6; /* align baseline */
 }
 
 header a:hover,
