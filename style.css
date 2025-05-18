@@ -89,15 +89,15 @@ main, .post-content {
 
 /* Post title inside articles — bigger and heavier */
 .post-content h1 {
-  font-size: 2.2rem;   /* Larger font size */
-  font-weight: 700;    /* Bold */
+  font-size: 1.5rem;   /* Larger font size */
+  font-weight: 600;    /* Bold */
   margin-bottom: 1rem; /* Some space below */
 }
 
 /* Section headers inside posts like "Python Code" and "Math" — smaller and lighter */
 .post-content h2 {
-  font-size: 1.4rem;   /* Smaller than h1 */
-  font-weight: 500;    /* Medium weight */
+  font-size: 1.2rem;   /* Smaller than h1 */
+  font-weight: 400;    /* Medium weight */
   margin-top: 2rem;    /* Some space above */
   margin-bottom: 0.75rem; /* Space below */
 }
