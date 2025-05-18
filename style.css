@@ -18,6 +18,15 @@ a {
   transition: color 0.3s ease;
 }
 
+nav {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem; /* increased from 2rem to 3rem */
+}
+
+
 header, footer {
   text-align: center;
   padding: 2rem 0;
