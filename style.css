@@ -97,7 +97,7 @@ main, .post-content {
 /* Section headers inside posts like "Python Code" and "Math" — smaller and lighter */
 .post-content h2 {
   font-size: 1.2rem;   /* Smaller than h1 */
-  font-weight: 400;    /* Medium weight */
+  font-weight: 550;    /* Medium weight */
   margin-top: 2rem;    /* Some space above */
   margin-bottom: 0.75rem; /* Space below */
 }
