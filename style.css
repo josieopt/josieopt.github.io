@@ -5,10 +5,9 @@ body {
   color: #1c1c1c; /* Notion-like dark gray */
   line-height: 1.6;
   margin: 0;
-  padding: 0 1rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0 1rem; /* left and right padding */
+  max-width: none; /* remove max-width so body fills container */
+  /* no margin-left/right auto so no centering */
 }
 
 a {
@@ -33,6 +32,7 @@ header {
   color: #1c1c1c;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: flex-start; /* align header content to left */
 }
 
 .blog-title {
@@ -71,9 +71,10 @@ main, .container > main, .post-content {
   background-color: white;
   padding: 2rem 1rem 3rem;
   border-radius: 0;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: none; /* remove max width */
+  margin: 0; /* no centering */
   color: #1c1c1c; /* Text dark gray */
+  text-align: left; /* force left alignment */
 }
 
 /* Inside posts: links are taro purple by default, underline on hover/focus */
@@ -100,6 +101,9 @@ main, .container > main, .post-content {
   padding-bottom: 1rem;
   list-style: none;
   color: #1c1c1c;
+  text-align: left; /* left align */
+  padding-left: 0; /* remove any left padding */
+  margin-left: 0; /* remove margin */
 }
 
 .post-preview {
@@ -110,6 +114,7 @@ main, .container > main, .post-content {
 
 .post-text, .preview-text {
   flex: 1;
+  text-align: left;
 }
 
 .preview-thumb {
@@ -135,6 +140,7 @@ main, .container > main, .post-content {
   color: #777;
   margin-top: 0.2rem;
   display: block;
+  text-align: left;
 }
 
 /* === Images inside posts === */
@@ -142,7 +148,7 @@ main, .container > main, .post-content {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 2rem auto;
+  margin: 2rem 0; /* remove auto horizontal centering */
   border-radius: 0;
 }
 
@@ -177,30 +183,16 @@ code {
 
 /* === Footer === */
 footer {
-  text-align: center;
+  text-align: left;
   padding: 2rem 0;
   color: #1c1c1c;
   background: white;
 }
 
-/* === Alignment fix: Home page previews align left with search bar === */
-.container > main {
-  padding-left: 1rem;  /* same as body horizontal padding */
-  padding-right: 1rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Remove extra margin/padding from home page previews */
-.post-preview-with-thumb {
-  margin-left: 0;
-  padding-left: 0;
-  max-width: 100%;
-}
-
-/* Ensure preview text and thumbnail have no extra offset */
-.post-preview-with-thumb .post-text,
-.post-preview-with-thumb .preview-thumb {
-  margin-left: 0;
-  padding-left: 0;
+/* Remove container max-width and centering if any */
+.container {
+  max-width: none;
+  margin: 0;
+  padding: 2rem 1rem;
+  text-align: left;
 }
