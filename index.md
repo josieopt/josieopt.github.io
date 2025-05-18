@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<main>
+<div class="container">
   <input type="text" id="searchInput" placeholder="Search posts..." onkeyup="filterPosts()">
 
   <ul id="postList">
@@ -24,6 +24,6 @@ title: Home
       </li>
     {% endfor %}
   </ul>
-</main>
+</div>
 
 <script src="search.js"></script>
