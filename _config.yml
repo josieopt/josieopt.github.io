@@ -1,42 +1,12 @@
 title: JosieOpt Optimization Blog
 email: josielc1226@gmail.com
-description: Sharing optimization models and Python code
-
-# Removed theme to use custom layouts/styles
-# theme: minima
-
+description: >-
+  A clean blog to share optimization models and Python code.
+baseurl: ""
+url: "https://josiey.github.io"
 markdown: kramdown
-highlighter: rouge
-
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
-
-# Permalinks: cleaner URLs for posts
-permalink: /posts/:title/
-
-# Plugins
+theme: minima
 plugins:
   - jekyll-feed
-
-# Exclude these from the build (optional)
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - README.md
-  - vendor
-
-# Include files (optional - for assets like search.js or custom folders)
-include:
-  - _pages
-  - _posts
-  - assets
-  - style.css
-  - search.js
-
-# Collections (optional if you later add custom collections)
-# collections:
-#   tutorials:
-#     output: true
-#     permalink: /tutorials/:path/
