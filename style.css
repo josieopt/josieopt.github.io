@@ -20,7 +20,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  padding: 0.8rem 0; /* vertical padding only, horizontal padding comes from container */
+  padding: 0.8rem 0; /* vertical padding only */
   background-color: white;
   color: #1c1c1c;
   flex-wrap: wrap;
@@ -120,6 +120,13 @@ a:not(.post-content a):focus {
   margin-left: 0;
 }
 
+/* Remove any left margin/padding on post previews in home page */
+.post-preview,
+.post-preview-with-thumb {
+  margin-left: 0;
+  padding-left: 0;
+}
+
 .post-preview {
   display: flex;
   gap: 1rem;
@@ -186,11 +193,11 @@ code {
 
 /* === Footer === */
 footer {
-  text-align: left;
+  text-align: center; /* center footer text */
   padding: 2rem 0;
   color: #1c1c1c;
   background: white;
   max-width: 700px;
   margin: 0 auto; /* center footer block */
-  padding-left: 1rem; /* align left edge inside footer */
+  padding-left: 1rem;
 }
