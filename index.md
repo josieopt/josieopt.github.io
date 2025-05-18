@@ -4,6 +4,9 @@ title: Home
 ---
 
 <input type="text" id="searchInput" placeholder="Search posts..." onkeyup="filterPosts()">
+<div class="container">
+  <!-- Search bar (same style as Posts page) -->
+  <input type="text" id="searchInput" placeholder="Search posts..." onkeyup="filterPosts()">
 
 <ul id="postList">
   {% for post in site.posts %}
@@ -23,5 +26,5 @@ title: Home
     </li>
   {% endfor %}
 </ul>
-
+</div>
 <script src="search.js"></script>
