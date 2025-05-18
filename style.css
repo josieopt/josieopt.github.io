@@ -204,3 +204,9 @@ footer {
   margin: 0 auto; /* center footer block */
   padding-left: 1rem;
 }
+
+#postList {
+  padding-left: 0;
+  margin-left: 0;
+}
+
