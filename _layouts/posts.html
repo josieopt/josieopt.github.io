@@ -67,21 +67,23 @@
 
     <!-- Right sidebar: Tags -->
     <aside class="sidebar-right">
-      <h3>Tags</h3>
-      <ul>
-        {% if site.tags %}
-          {% assign all_tags = site.tags | sort %}
-          {% for tag in all_tags %}
-            <li>
-              <a href="/posts/tag/{{ tag[0] | slugify }}">
-  {{ tag[0] }}{% if tag[1] %} ({{ tag[1].size }}){% endif %}
-              </a>
-            </li>
-          {% endfor %}
-        {% else %}
-          <li>No tags available.</li>
-        {% endif %}
-      </ul>
+  <h3>Tags</h3>
+  <ul>
+    {% if site.tags and site.tags != empty %}
+      {% assign all_tags = site.tags | sort %}
+      {% for tag in all_tags %}
+        {% assign tag_name = tag[0] %}
+        {% assign tag_posts = tag[1] %}
+        <li>
+          <a href="/posts/tag/{{ tag_name | slugify }}">
+            {{ tag_name }}{% if tag_posts %} ({{ tag_posts.size }}){% endif %}
+          </a>
+        </li>
+      {% endfor %}
+    {% else %}
+      <li>No tags available.</li>
+    {% endif %}
+  </ul>
     </aside>
   </div>
 
