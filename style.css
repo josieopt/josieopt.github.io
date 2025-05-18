@@ -90,6 +90,7 @@ main a:focus,
 }
 
 /* === Post previews and lists === */
+/* Align previews and post archive list left edge with search bar left edge */
 .post-preview,
 .post-preview-with-thumb,
 .post-archive-list {
@@ -97,6 +98,8 @@ main a:focus,
   border-bottom: 1px solid #eee;
   padding-bottom: 1rem;
   list-style: none;
+  padding-left: 0;  /* Remove any default padding */
+  margin-left: 0;   /* Remove any default margin */
 }
 
 .post-preview {
@@ -125,6 +128,8 @@ main a:focus,
 .post-archive-list li {
   font-size: 1.1rem;
   margin-bottom: 1rem;
+  padding-left: 0;  /* Remove extra left padding */
+  margin-left: 0;   /* Remove extra left margin */
 }
 
 .post-date {
