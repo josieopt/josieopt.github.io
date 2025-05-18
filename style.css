@@ -185,22 +185,24 @@ pre, code {
 }
 
 pre {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  background: #0d1117; /* dark black/blue GitHub code bg */
-  color: #c9d1d9;      /* light text */
+  background-color: #0d1117; /* GitHub dark background */
   padding: 1rem;
-  overflow-x: auto;
   border-radius: 6px;
+  overflow-x: auto;
+  color: #c9d1d9; /* Light text */
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
-/* Inline code */
 code {
-  background: #161b22; /* slightly lighter black for inline */
-  color: #c9d1d9;
-  padding: 0.2em 0.4em;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent; /* avoid overriding bg */
+  color: inherit;
+  padding: 0;
   border-radius: 4px;
 }
-
 
 
 /* === Footer === */
