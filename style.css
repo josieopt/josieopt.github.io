@@ -64,6 +64,19 @@ input[type="text"] {
   margin: 2rem auto;  /* Center horizontally and add vertical spacing */
 }
 
+.post-content a {
+  color: #a875ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.post-content a:hover,
+.post-content a:focus {
+  color: #a875ff;
+  text-decoration: underline; /* optional, remove if you don’t want underline */
+}
+
 
 .preview-text {
   flex: 1;
