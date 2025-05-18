@@ -7,10 +7,13 @@ body {
   padding: 0 1rem;
 }
 
+/* Ensure content widths match */
 .container {
-  max-width: 800px;
-  margin: auto;
+  max-width: 700px; /* same as Posts page */
+  margin: 0 auto;
+  padding: 2rem;
 }
+
 
 a {
   color: inherit;
@@ -39,11 +42,44 @@ input[type="text"] {
   font-size: 1rem;
 }
 
+/* Consistent post preview layout */
 .post-preview {
+  display: flex;
+  gap: 1rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid #eee;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  align-items: flex-start;
 }
+
+/* Text portion of the preview */
+.post-text {
+  flex: 1;
+}
+
+/* Image next to preview */
+.post-image img {
+  height: 100%;
+  max-height: 140px;
+  width: auto;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+/* Headings & text links */
+.post-preview h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+.post-preview a {
+  color: #a875ff;
+  text-decoration: none;
+}
+
+.post-preview a:hover {
+  text-decoration: underline;
+}
+
 
 /* Home page preview layout */
 .post-preview-with-thumb {
@@ -120,4 +156,23 @@ code {
   font-size: 0.95em;
   background: #f0f0f0;
 }
+
+/* Search bar (shared across pages) */
+#searchInput {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Post preview container */
+#postList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 
