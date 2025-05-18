@@ -126,6 +126,10 @@ a:not(.post-content a):focus {
 .post-preview-with-thumb {
   margin-left: 0;
   padding-left: 0;
+  width: 100%;       /* full width of their container */
+  max-width: 700px;  /* consistent max width */
+  margin-left: 0;    /* align left */
+  box-sizing: border-box; /* include padding/border in width */
 }
 
 .post-preview {
