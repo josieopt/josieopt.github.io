@@ -1,181 +1,32 @@
-/* Base body style: Notion-like */
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  background: #ffffff;
-  color: #37352f; /* Notion's default text color */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  line-height: 1.7;
-  font-size: 17px;
+  padding: 0 1rem;
 }
 
-/* Container to center all content */
 .container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: left;
+  max-width: 800px;
+  margin: auto;
 }
 
-/* Header title */
-header h1 {
+header, footer {
   text-align: center;
-  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
   margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
-/* Navigation styling */
-nav {
-  text-align: center;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.blog-title {
-  color: #a875ff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.blog-title:hover,
-.blog-title:focus {
-  color: #a875ff; /* Keep same color on hover/focus */
-  text-decoration: underline; /* Optional */
-}
-
-/* Link styling: match Notion by default, turn taro purple on hover/visit */
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover,
-a:focus {
-  color: #a875ff !important; /* Taro purple on hover/focus only */
-}
-
-/* Remove purple for visited */
-a:visited {
-  color: inherit;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 4rem;
-  font-size: 0.9rem;
-  color: #999;
-}
-
-/* Post preview on homepage */
 .post-preview {
   margin-bottom: 2rem;
   border-bottom: 1px solid #eee;
   padding-bottom: 1rem;
 }
-
-.post-preview img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-/* Search bar */
-#searchInput {
-  width: 100%;
-  padding: 0.6rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  margin-bottom: 1.5rem;
-  border-radius: 6px;
-}
-
-/* Layout for posts page with sidebar */
-.posts-layout {
-  display: flex;
-  gap: 2rem;
-  /* For wider screens, container max-width can be overridden to fit sidebar + content */
-  max-width: none;
-  padding: 2rem;
-  margin: 0 auto;
-  box-sizing: border-box;
-  /* Optional: max-width cap */
-  max-width: 1100px;
-}
-
-/* Left sidebar for Years */
-.sidebar-left {
-  flex: 0 0 150px;
-  position: sticky;
-  top: 2rem;
-  height: fit-content;
-  font-size: 0.9rem;
-  border-right: 1px solid #eee;
-  padding-right: 1rem;
-}
-
-.sidebar-left ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.sidebar-left a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.sidebar-left a:hover {
-  color: #a875ff;
-}
-
-/* Right sidebar for Tags */
-.sidebar-right {
-  flex: 0 0 150px;
-  position: sticky;
-  top: 2rem;
-  height: fit-content;
-  font-size: 0.9rem;
-  border-left: 1px solid #eee;
-  padding-left: 1rem;
-}
-
-.sidebar-right ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.sidebar-right a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.sidebar-right a:hover {
-  color: #a875ff;
-}
-
-/* Main posts section */
-.posts-content {
-  flex: 1;
-}
-
-.posts-content h2 {
-  margin-top: 2rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.5rem;
-}
-
-/* Make links inside posts always taro purple */
-.posts-content a {
-  color: #a875ff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.posts-content a:hover,
-.posts-content a:focus {
-  /* Optional: keep same*
