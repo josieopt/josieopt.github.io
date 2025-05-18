@@ -34,6 +34,34 @@ header {
   gap: 1rem;
 }
 
+/* All header text and links are dark grey and no color change on hover/focus */
+header,
+header a:not(.read-more) {
+  color: #1c1c1c;
+  text-decoration: none;
+  transition: none;
+  cursor: default;
+}
+
+header a:not(.read-more):hover,
+header a:not(.read-more):focus {
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+/* “Read more” links keep normal purple behavior */
+header a.read-more {
+  color: #a875ff;
+  cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+header a.read-more:hover,
+header a.read-more:focus {
+  color: #5b2d90;
+  text-decoration: underline;
+}
+
 .blog-title {
   font-weight: 700;
   font-size: 1.6rem;
@@ -52,16 +80,17 @@ nav {
   flex-grow: 1;
 }
 
-header nav a {
-  color: inherit;
+nav a {
+  color: #1c1c1c;
   text-decoration: none;
-  transition: text-decoration 0.3s ease;
+  transition: none;
+  cursor: default;
 }
 
-header nav a:hover,
-header nav a:focus {
-  text-decoration: underline;
-  color: inherit;
+nav a:hover,
+nav a:focus {
+  color: #1c1c1c;
+  text-decoration: none;
 }
 
 /* === Main content area === */
@@ -71,26 +100,49 @@ main, .container > main, .post-content {
   border-radius: 0;
   max-width: 700px;
   margin: 0 auto;
+  color: #1c1c1c; /* Make text dark grey */
 }
 
-/* Override link colors inside main content */
-main a,
-.post-content a,
-.container a {
+/* Override link colors inside main content except .read-more */
+main a:not(.read-more),
+.post-content a:not(.read-more),
+.container a:not(.read-more) {
+  color: #1c1c1c;
+  text-decoration: none;
+  transition: none;
+  cursor: default;
+}
+
+main a:not(.read-more):hover,
+main a:not(.read-more):focus,
+.post-content a:not(.read-more):hover,
+.post-content a:not(.read-more):focus,
+.container a:not(.read-more):hover,
+.container a:not(.read-more):focus {
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+/* “Read more” links inside main content keep purple hover effect */
+main a.read-more,
+.post-content a.read-more,
+.container a.read-more {
   color: #a875ff;
+  cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-main a:hover,
-main a:focus,
-.post-content a:hover,
-.post-content a:focus,
-.container a:hover,
-.container a:focus {
+main a.read-more:hover,
+main a.read-more:focus,
+.post-content a.read-more:hover,
+.post-content a.read-more:focus,
+.container a.read-more:hover,
+.container a.read-more:focus {
   color: #5b2d90;
+  text-decoration: underline;
 }
 
 /* === Post previews and lists === */
-/* Align previews and post archive list left edge with search bar left edge */
 .post-preview,
 .post-preview-with-thumb,
 .post-archive-list {
@@ -98,8 +150,7 @@ main a:focus,
   border-bottom: 1px solid #eee;
   padding-bottom: 1rem;
   list-style: none;
-  padding-left: 0;  /* Remove any default padding */
-  margin-left: 0;   /* Remove any default margin */
+  color: #1c1c1c;
 }
 
 .post-preview {
@@ -128,8 +179,6 @@ main a:focus,
 .post-archive-list li {
   font-size: 1.1rem;
   margin-bottom: 1rem;
-  padding-left: 0;  /* Remove extra left padding */
-  margin-left: 0;   /* Remove extra left margin */
 }
 
 .post-date {
@@ -183,4 +232,26 @@ footer {
   padding: 2rem 0;
   color: #1c1c1c;
   background: white;
+}
+
+/* === Alignment fix: Home page previews align left with search bar === */
+.container > main {
+  padding-left: 1rem;  /* same as body horizontal padding */
+  padding-right: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Remove extra margin/padding from home page previews */
+.post-preview-with-thumb {
+  margin-left: 0;
+  padding-left: 0;
+  max-width: 100%;
+}
+
+/* Ensure preview text and thumbnail have no extra offset */
+.post-preview-with-thumb .post-text,
+.post-preview-with-thumb .preview-thumb {
+  margin-left: 0;
+  padding-left: 0;
 }
