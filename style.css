@@ -131,16 +131,10 @@ a:not(.post-content a):focus {
 }
 
 .read-more-link {
-  color: #a875ff;
+  color: #a875ff !important;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
-}
-
-.read-more-link:hover,
-.read-more-link:focus {
-  color: #5b2d90;
-  text-decoration: underline;
 }
 
 
