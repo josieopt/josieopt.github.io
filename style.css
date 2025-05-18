@@ -14,11 +14,20 @@ body {
   padding: 2rem;
 }
 
-
+/* === Global link style === */
 a {
-  color: inherit;
+  color: #a875ff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: #a875ff;
+  text-decoration: underline;
+}
+a:visited {
+  color: #a875ff;
 }
 
 nav {
@@ -71,16 +80,6 @@ input[type="text"] {
   margin: 0 0 0.5rem 0;
 }
 
-.post-preview a {
-  color: #a875ff;
-  text-decoration: none;
-}
-
-.post-preview a:hover {
-  text-decoration: underline;
-}
-
-
 /* Home page preview layout */
 .post-preview-with-thumb {
   display: flex;
@@ -91,21 +90,6 @@ input[type="text"] {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
 }
-
-/* Style only title and "Read more" links on the home page */
-.post-preview-with-thumb h2 a,
-.post-preview-with-thumb .preview-text > a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
-}
-
-.post-preview-with-thumb h2 a:hover,
-.post-preview-with-thumb .preview-text > a:hover {
-  color: #5b2d90; /* Taro purple */
-  text-decoration: underline;
-}
-
 
 /* Images inside post content */
 .post-content img {
