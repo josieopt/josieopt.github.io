@@ -23,7 +23,7 @@ nav {
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
-  gap: 3rem; /* increased from 2rem to 3rem */
+  gap: 5rem; /* increased from 2rem to 5rem */
 }
 
 
@@ -76,20 +76,6 @@ input[type="text"] {
   color: #a875ff;
   text-decoration: underline; /* optional, remove if you don’t want underline */
 }
-
-/* Blockquote styling inside posts */
-.post-content blockquote {
-  border-left: 4px solid #a875ff; /* Taro purple accent */
-  background-color: #f9f9ff;
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
-  font-style: italic;
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.7;
-  border-radius: 6px;
-}
-
 
 .preview-text {
   flex: 1;
