@@ -98,3 +98,26 @@ input[type="text"] {
   object-fit: cover;
   border-radius: 6px;
 }
+
+/* Code block styling */
+pre, code {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: #f6f8fa;
+  color: #333;
+  border-radius: 6px;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  font-size: 0.95em;
+  background: #f0f0f0;
+}
+
