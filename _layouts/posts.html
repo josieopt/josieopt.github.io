@@ -74,7 +74,7 @@
           {% for tag in all_tags %}
             <li>
               <a href="/posts/tag/{{ tag[0] | slugify }}">
-                {{ tag[0] }} ({{ tag[1].size }})
+  {{ tag[0] }}{% if tag[1] %} ({{ tag[1].size }}){% endif %}
               </a>
             </li>
           {% endfor %}
