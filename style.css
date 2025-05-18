@@ -1,82 +1,83 @@
+/* === Base styles === */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: white;
+  color: #1c1c1c; /* Notion-like dark gray */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #a875ff; /* Default link color inside posts */
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #5b2d90; /* Darker purple on hover */
+  text-decoration: underline;
+}
+
+/* === Header === */
 header {
   display: flex;
   align-items: center;
   padding: 0.8rem 1rem;
-  background-color: #5b2d90; /* Taro purple */
-  color: white;
+  background-color: white;
+  color: #1c1c1c;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-/* Blog title */
 .blog-title {
   font-weight: 700;
   font-size: 1.6rem;
   margin-right: 2rem;
-  color: white;
+  color: inherit;
   text-decoration: none;
   flex-shrink: 0;
 }
 
-/* Navigation aligned left */
 nav {
   display: flex;
   gap: 1.5rem;
-  color: white;
   font-weight: 600;
-  justify-content: flex-start; /* Align nav links to left */
+  justify-content: flex-start;
   flex-wrap: wrap;
-  flex-grow: 1; /* take remaining space */
+  flex-grow: 1;
 }
 
-
-/* Light purple background below header */
-main, .container > main {
-  background-color: #faf7fe; /* very light purple, close to white */
-  padding: 2rem 1rem;
-  min-height: 80vh; /* optional, for nice spacing */
-  max-width: 700px;
-  margin: 0 auto;
-  border-radius: 6px;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: #fff;
-  color: #333;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0 1rem;
-}
-
-/* Ensure content widths match */
-.container {
-  max-width: 700px; /* same as Posts page */
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-/* Header nav links: no color change on hover, only underline */
 header nav a {
-  color: white;              /* keep white */
-  text-decoration: none;     /* no underline initially */
-  transition: text-decoration 0.3s ease; /* only underline transition */
+  color: inherit;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
 }
 
 header nav a:hover,
 header nav a:focus {
-  text-decoration: underline;  /* underline only */
-  color: white;                /* force keep white */
+  text-decoration: underline;
+  color: inherit;
 }
 
-/* Content area links (under header) */
-/* Assuming your content area uses .post-content, .container, or main */
-main a, 
-.post-content a, 
+/* === Main content area === */
+main, .container > main, .post-content {
+  background-color: white;
+  padding: 2rem 1rem 3rem;
+  border-radius: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Override link colors inside main content */
+main a,
+.post-content a,
 .container a {
-  color: #a875ff; /* Taro purple default */
-  text-decoration: none;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  color: #a875ff;
 }
 
 main a:hover,
@@ -85,96 +86,31 @@ main a:focus,
 .post-content a:focus,
 .container a:hover,
 .container a:focus {
-  color: #5b2d90; /* Darker taro purple on hover */
-  text-decoration: underline;
+  color: #5b2d90;
 }
 
-
-footer {
-  text-align: center;
-  padding: 2rem 0;
+/* === Post previews and lists === */
+.post-preview,
+.post-preview-with-thumb,
+.post-archive-list {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  list-style: none;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-/* Consistent post preview layout */
 .post-preview {
   display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 1.5rem;
   align-items: flex-start;
 }
 
-/* Text portion of the preview */
-.post-text {
+.post-text, .preview-text {
   flex: 1;
-}
-
-/* Image next to preview */
-.post-image img {
-  height: 100%;
-  max-height: 140px;
-  width: auto;
-  border-radius: 6px;
-  object-fit: contain;
-}
-
-/* Headings & text links */
-.post-preview h2 {
-  margin: 0 0 0.5rem 0;
-}
-
-/* Home page preview layout */
-.post-preview-with-thumb {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-}
-
-/* Images inside post content */
-.post-content img {
-  display: block;
-  max-width: 100%;    /* Scale down if too large */
-  height: auto;       /* Maintain aspect ratio */
-  margin: 2rem auto;  /* Center horizontally and add vertical spacing */
-}
-
-.post-content a {
-  color: #a875ff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.post-content a:hover,
-.post-content a:focus {
-  color: #a875ff;
-  text-decoration: underline; /* optional, remove if you don’t want underline */
-}
-
-.preview-text {
-  flex: 1;
-}
-
-.preview-text h2 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
 }
 
 .preview-thumb {
   width: 160px;
-  height: auto;
   flex-shrink: 0;
 }
 
@@ -184,71 +120,62 @@ input[type="text"] {
   object-fit: cover;
   border-radius: 6px;
 }
-/* Search bar (shared across pages) */
-#searchInput {
-  width: 100%;
-  padding: 0.6rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  margin-bottom: 1.5rem;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
 
-/* Post preview container */
-#postList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.post-archive-list {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 2rem;
-}
-
+/* Archive list items */
 .post-archive-list li {
-  margin-bottom: 1rem;
   font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
-
 
 .post-date {
-  display: block;
   font-size: 0.85rem;
   color: #777;
   margin-top: 0.2rem;
+  display: block;
 }
 
-.post-content {
-  max-width: 800px;
-  margin: auto;
-  padding: 1rem 0;
+/* === Images inside posts === */
+.post-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 0;
 }
 
-
-
-
-
-/* Code block styling */
+/* === Code blocks === */
 pre, code {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   background: #f6f8fa;
   color: #333;
   border-radius: 6px;
 }
-/* Optional: style code blocks more like GitHub */
+
 pre {
-  background: #f6f8fa;
   padding: 1rem;
-  border-radius: 6px;
   overflow-x: auto;
 }
 
 code {
-  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
-  background-color: #f6f8fa;
   padding: 0.2em 0.4em;
   border-radius: 4px;
+}
+
+/* === Search bar === */
+#searchInput {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #1c1c1c;
+  background: white;
 }
