@@ -56,6 +56,15 @@ input[type="text"] {
   padding-bottom: 1rem;
 }
 
+/* Images inside post content */
+.post-content img {
+  display: block;
+  max-width: 100%;    /* Scale down if too large */
+  height: auto;       /* Maintain aspect ratio */
+  margin: 2rem auto;  /* Center horizontally and add vertical spacing */
+}
+
+
 .preview-text {
   flex: 1;
 }
