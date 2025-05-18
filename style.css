@@ -130,6 +130,13 @@ a:not(.post-content a):focus {
   box-sizing: border-box; /* include padding/border in width */
 }
 
+.post-preview-with-thumb a:last-child {
+  color: #a875ff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
 .post-preview {
   display: flex;
   gap: 1rem;
