@@ -29,18 +29,6 @@ nav {
   flex-grow: 1; /* take remaining space */
 }
 
-/* Nav link styles */
-nav a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav a:hover,
-nav a:focus {
-  color: #d6b8ff; /* lighter purple highlight */
-  text-decoration: underline;
-}
 
 /* Light purple background below header */
 main, .container > main {
@@ -68,26 +56,37 @@ body {
   padding: 2rem;
 }
 
-/* === Global link style === */
-a {
-  color: inherit;
+/* Header nav links: no color change on hover, only underline */
+header nav a {
+  color: white;              /* keep white */
+  text-decoration: none;     /* no underline initially */
+  transition: text-decoration 0.3s ease; /* only underline transition */
+}
+
+header nav a:hover,
+header nav a:focus {
+  text-decoration: underline;  /* underline only */
+  color: white;                /* force keep white */
+}
+
+/* Content area links (under header) */
+/* Assuming your content area uses .post-content, .container, or main */
+main a, 
+.post-content a, 
+.container a {
+  color: #a875ff; /* Taro purple default */
   text-decoration: none;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-a:hover,
-a:focus {
-  color: #a875ff;
+main a:hover,
+main a:focus,
+.post-content a:hover,
+.post-content a:focus,
+.container a:hover,
+.container a:focus {
+  color: #5b2d90; /* Darker taro purple on hover */
   text-decoration: underline;
-}
-
-
-nav {
-  text-align: center;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 5rem; /* increased from 2rem to 5rem */
 }
 
 
