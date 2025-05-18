@@ -87,6 +87,25 @@ main, .post-content {
   text-align: left;
 }
 
+/* Post title inside articles */
+.post-content h1, 
+.post-content h2, 
+.post-content h3 {
+  font-weight: 300;
+}
+
+/* Code blocks inside posts */
+.post-content pre, 
+.post-content code {
+  font-weight: 300;
+}
+
+/* Math rendered by KaTeX inside posts */
+.post-content .katex {
+  font-weight: 300;
+}
+
+
 /* Links inside posts: taro purple by default */
 .post-content a {
   color: #a875ff; /* Taro purple */
