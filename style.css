@@ -91,18 +91,18 @@ main, .post-content {
 .post-content h1, 
 .post-content h2, 
 .post-content h3 {
-  font-weight: 300;
+  font-weight: 500;
 }
 
 /* Code blocks inside posts */
 .post-content pre, 
 .post-content code {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Math rendered by KaTeX inside posts */
 .post-content .katex {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 
