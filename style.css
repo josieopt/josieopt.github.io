@@ -16,7 +16,7 @@ body {
 
 /* === Global link style === */
 a {
-  color: #a875ff;
+  color: inherit;
   text-decoration: none;
   transition: color 0.2s ease, text-decoration 0.2s ease;
 }
@@ -26,9 +26,7 @@ a:focus {
   color: #a875ff;
   text-decoration: underline;
 }
-a:visited {
-  color: #a875ff;
-}
+
 
 nav {
   text-align: center;
