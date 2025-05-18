@@ -7,6 +7,6 @@ url: "https://josiey.github.io"
 markdown: kramdown
 kramdown:
   input: GFM
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
