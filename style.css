@@ -160,15 +160,6 @@ input[type="text"] {
   font-size: 1.1rem;
 }
 
-.post-archive-list a {
-  font-weight: 600;
-  color: #5b2d90; /* Taro purple */
-  text-decoration: none;
-}
-
-.post-archive-list a:hover {
-  text-decoration: underline;
-}
 
 .post-date {
   display: block;
