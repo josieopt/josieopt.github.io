@@ -165,7 +165,7 @@ a:not(.post-content a):focus {
 
 .preview-thumb {
   flex-shrink: 1;
-  /* No need to set height explicitly, will stretch due to align-items: stretch */
+  height: 150px;
 }
 
 .preview-thumb img {
