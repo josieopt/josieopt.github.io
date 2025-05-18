@@ -11,7 +11,7 @@ title: Home
       <div class="preview-text">
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
         <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
-        <a href="{{ post.url }}">Read more →</a>
+        <a href="{{ post.url }}" class="read-more-link">Read more →</a>
       </div>
       {% assign first_img = post.content | split:'<img' | slice:1,1 | first %}
       {% if first_img %}
