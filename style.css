@@ -130,6 +130,13 @@ a:not(.post-content a):focus {
   box-sizing: border-box; /* include padding/border in width */
 }
 
+.post-preview-with-thumb {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
 .read-more-link {
   color: #a875ff !important;
   font-weight: 500;
