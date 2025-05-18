@@ -5,34 +5,27 @@ body {
   color: #1c1c1c; /* Notion-like dark gray */
   line-height: 1.6;
   margin: 0;
-  padding: 0 1rem; /* left and right padding */
-  max-width: none; /* remove max-width so body fills container */
-  /* no margin-left/right auto so no centering */
+  padding: 0;
 }
 
-a {
-  color: #1c1c1c; /* Default link color outside posts */
-  text-decoration: none;
-  transition: text-decoration 0.3s ease;
-  cursor: pointer;
-}
-
-/* Links outside posts: dark gray, underline on hover/focus */
-a:hover,
-a:focus {
-  text-decoration: underline;
+/* Center container */
+.container {
+  max-width: 700px;
+  margin: 0 auto; /* center horizontally */
+  padding: 2rem 1rem;
+  text-align: left; /* left align inside container */
 }
 
 /* === Header === */
 header {
   display: flex;
   align-items: center;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0; /* vertical padding only, horizontal padding comes from container */
   background-color: white;
   color: #1c1c1c;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: flex-start; /* align header content to left */
+  justify-content: flex-start; /* align content to left inside header */
 }
 
 .blog-title {
@@ -53,7 +46,6 @@ nav {
   flex-grow: 1;
 }
 
-/* Header links: dark gray, underline on hover/focus */
 header a {
   color: #1c1c1c;
   text-decoration: none;
@@ -66,18 +58,27 @@ header a:focus {
   color: #1c1c1c;
 }
 
-/* === Main content area === */
-main, .container > main, .post-content {
-  background-color: white;
-  padding: 2rem 1rem 3rem;
-  border-radius: 0;
-  max-width: none; /* remove max width */
-  margin: 0; /* no centering */
-  color: #1c1c1c; /* Text dark gray */
-  text-align: left; /* force left alignment */
+/* === Search bar === */
+#searchInput {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
-/* Inside posts: links are taro purple by default, underline on hover/focus */
+/* === Main content area === */
+main, .post-content {
+  background-color: white;
+  padding: 0 0 3rem; /* padding bottom only, horizontal padding from container */
+  border-radius: 0;
+  color: #1c1c1c; /* Text dark gray */
+  text-align: left;
+}
+
+/* Links inside posts: taro purple by default */
 .post-content a {
   color: #a875ff; /* Taro purple */
   text-decoration: none;
@@ -92,6 +93,19 @@ main, .container > main, .post-content {
   text-decoration: underline;
 }
 
+/* Links outside posts: dark gray, underline on hover/focus */
+a:not(.post-content a) {
+  color: #1c1c1c;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+  cursor: pointer;
+}
+
+a:not(.post-content a):hover,
+a:not(.post-content a):focus {
+  text-decoration: underline;
+}
+
 /* === Post previews and lists === */
 .post-preview,
 .post-preview-with-thumb,
@@ -101,9 +115,9 @@ main, .container > main, .post-content {
   padding-bottom: 1rem;
   list-style: none;
   color: #1c1c1c;
-  text-align: left; /* left align */
-  padding-left: 0; /* remove any left padding */
-  margin-left: 0; /* remove margin */
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .post-preview {
@@ -148,7 +162,7 @@ main, .container > main, .post-content {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 2rem 0; /* remove auto horizontal centering */
+  margin: 2rem 0;
   border-radius: 0;
 }
 
@@ -170,29 +184,13 @@ code {
   border-radius: 4px;
 }
 
-/* === Search bar === */
-#searchInput {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
 /* === Footer === */
 footer {
   text-align: left;
   padding: 2rem 0;
   color: #1c1c1c;
   background: white;
-}
-
-/* Remove container max-width and centering if any */
-.container {
-  max-width: none;
-  margin: 0;
-  padding: 2rem 1rem;
-  text-align: left;
+  max-width: 700px;
+  margin: 0 auto; /* center footer block */
+  padding-left: 1rem; /* align left edge inside footer */
 }
