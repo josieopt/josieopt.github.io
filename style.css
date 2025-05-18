@@ -1,162 +1,79 @@
-/* Base body style: Notion-like */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  background: #ffffff;
-  color: #37352f;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  line-height: 1.7;
-  font-size: 17px;
+  padding: 0 1rem;
 }
 
-/* Container to center all content */
 .container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: left;
+  max-width: 800px;
+  margin: auto;
 }
 
-/* Header title */
-header h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* Navigation styling */
-nav {
-  text-align: center;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.blog-title {
-  color: #a875ff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.blog-title:hover,
-.blog-title:focus {
-  color: #a875ff;
-  text-decoration: underline;
-}
-
-/* Links styling */
 a {
   color: inherit;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a:hover,
-a:focus {
-  color: #a875ff !important;
+nav {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem; /* increased from 2rem to 3rem */
 }
 
-a:visited {
-  color: inherit;
+
+header, footer {
+  text-align: center;
+  padding: 2rem 0;
 }
 
-/* Search bar */
-#searchInput {
+input[type="text"] {
   width: 100%;
-  padding: 0.6rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  margin-bottom: 1.5rem;
-  border-radius: 6px;
 }
 
-/* Post preview container */
 .post-preview {
   margin-bottom: 2rem;
   border-bottom: 1px solid #eee;
   padding-bottom: 1rem;
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
 }
 
-/* When post preview has thumbnail */
+/* Home page preview layout */
 .post-preview-with-thumb {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
-/* Image container */
-.post-preview-with-thumb .post-thumb {
-  max-width: 200px; /* Max width so image doesn't get too wide */
-  flex-shrink: 0;   /* Prevent shrinking */
-  display: flex;
-  align-items: center; /* vertically center the image */
+.preview-text {
+  flex: 1;
 }
 
-/* Image styling */
-.post-preview-with-thumb .post-thumb img {
-  height: 100%;      /* match container height */
-  width: auto;       /* keep natural width according to aspect ratio */
-  max-width: 100%;   /* prevent overflow */
-  object-fit: contain; /* prevent distortion */
-  border-radius: 8px;
+.preview-text h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
-/* Text content in preview */
-.post-preview-with-thumb .post-text {
-  flex: 1; /* Take remaining horizontal space */
+.preview-thumb {
+  width: 160px;
+  height: auto;
+  flex-shrink: 0;
 }
 
-/* Title */
-.post-preview h2, 
-.post-preview-with-thumb .post-text h2 {
-  margin: 0 0 0.5rem 0;
-}
-
-/* Excerpt paragraph */
-.post-preview p,
-.post-preview-with-thumb .post-text p {
-  margin: 0 0 0.5rem 0;
-}
-
-/* Read more link */
-.post-preview a,
-.post-preview-with-thumb .post-text a {
-  color: #a875ff;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.post-preview a:hover,
-.post-preview-with-thumb .post-text a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .post-preview,
-  .post-preview-with-thumb {
-    flex-direction: column;
-  }
-
-  .post-preview-with-thumb .post-thumb {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .post-preview-with-thumb .post-thumb img {
-    height: auto;
-    width: 100%;
-  }
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 4rem;
-  font-size: 0.9rem;
-  color: #999;
+.preview-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
 }
