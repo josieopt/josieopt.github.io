@@ -132,9 +132,8 @@ a:not(.post-content a):focus {
 
 .post-preview-with-thumb {
   display: flex;
-  flex-direction: row;
-  align-items: stretch; /* Make children same height */
   gap: 1rem;
+  align-items: stretch; /* Make children same height */
 }
 
 .read-more-link {
@@ -151,30 +150,22 @@ a:not(.post-content a):focus {
   align-items: flex-start;
 }
 
-.post-text {
+.post-text, .preview-text {
   flex: 1;
   text-align: left;
 }
 
-.preview-text {
-  flex: 1; /* Take available space */
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* distribute space so Read more stays bottom */
-}
-
 .preview-thumb {
-  flex-shrink: 0; /* don't shrink */
-  display: flex;
-  align-items: stretch; /* stretch to fill height */
+  flex-shrink: 0;
+  /* No need to set height explicitly, will stretch due to align-items: stretch */
 }
 
 .preview-thumb img {
-  height: 100%;      /* make image height match container */
-  width: auto;       /* width adjusts proportionally */
-  object-fit: cover; /* crop if needed */
+  height: 100%;  /* match the container height (same as preview-text) */
+  width: auto;   /* scale width proportionally */
+  object-fit: contain; /* show whole image */
   border-radius: 6px;
+  display: block; /* remove inline spacing */
 }
 
 /* Archive list items */
