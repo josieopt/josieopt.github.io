@@ -1,13 +1,15 @@
-
 title: JosieOpt Optimization Blog
 email: josielc1226@gmail.com
 description: Sharing optimization models and Python code
-highlighter: rouge
+
+theme: minima
+
 markdown: kramdown
+highlighter: rouge
+
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-theme: minima
+
 plugins:
   - jekyll-feed
-
