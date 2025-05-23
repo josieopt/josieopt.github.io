@@ -31,7 +31,7 @@ header {
 .blog-title {
   font-weight: 700;
   font-size: 2rem;
-  color: inherit;
+  color: #a875ff;
   text-decoration: none;
   margin: 0; /* remove default margin */
   flex-shrink: 0;
