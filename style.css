@@ -37,12 +37,19 @@ header {
   flex-shrink: 0;
 }
 
+.blog-header {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .blog-subtitle {
   font-size: 1rem;
   font-weight: 400;
-  margin-left: 0.75rem;
-  color: inherit; /* same dark gray */
+  color: inherit;
+  margin-top: 0.2rem;
 }
+
 
 /* Preview post titles smaller */
 .post-preview-with-thumb .preview-text h2 {
