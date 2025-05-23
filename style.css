@@ -37,6 +37,13 @@ header {
   flex-shrink: 0;
 }
 
+.blog-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 0.75rem;
+  color: inherit; /* same dark gray */
+}
+
 /* Preview post titles smaller */
 .post-preview-with-thumb .preview-text h2 {
   font-size: 1.5rem; /* Smaller than blog title */
